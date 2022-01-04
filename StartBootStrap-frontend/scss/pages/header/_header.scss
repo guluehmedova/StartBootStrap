@@ -50,89 +50,29 @@ table {
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'MyFont';
-    src: url("../assets/fonts/Montserrat-ExtraBold.ttf");
-}
-header
+nav 
 {
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-}
-nav
-{
-    width: 100%;
-    background-color: #294058;
-    display: flex;
-    height: 100px;
-    position: relative;
-   .navbar
-   {
-       padding-top: 40px;
-    a 
+    background-color:  #294058;
+    height: 104px;
+    .navbar-brand
     {
+        font-size: 1.75rem;
         color: white;
         font-weight: 900;
-        text-decoration: none;
-        font-family: "MyFont";
-        margin: 0px 0.8rem;
+        margin-left: 1rem;
     }
-    
-    .main-text
+    .navbar-nav
     {
-        color: white;
-        font-size: 1.75em;
-        font-family: "MyFont";
-    }
-    #list-menu 
-    {
-        margin: 0 32px;
-        padding: 0px 28px;
-        li 
+        a 
         {
-            list-style: none;
-            display: inline-block;
-            margin: 0px 0.25rem;
-            a:hover 
-            {
-                color: #1abc9c;
-                transition: all 0.4s;
-            }
+            text-decoration: none;
+            color: white;
+            font-weight: 900;
+            margin-right: 10px;
         }
-    }
-    .nav-list
-    {
-        display: contents;
-    }
-
-    .menu
-    {
-        display: none;
-    }
-   }
-}
-
-@media screen and (max-width:768px) {
-    .menu
-    {
-        display: block !important;
-        width: 85px;
-        height: 43px;
-        font-size: 80%;
-        background-color: #1abc9c;
-        color: white;
-        padding: 12px;
-        text-align: center;
-        border-radius: 0.5rem;
-        position: absolute;
-        left: 500px;
-        bottom: 35px;
-        cursor: pointer;
-    }
-
-    #list-menu li a
-    {
-        margin: 20px 0;
+        a:hover 
+        {
+            color: #1abc9c;
+        }
     }
 }

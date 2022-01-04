@@ -57,89 +57,27 @@ table {
           box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'MyFont';
-  src: url("../assets/fonts/Montserrat-ExtraBold.ttf");
-}
-
-header {
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-}
-
 nav {
-  width: 100%;
   background-color: #294058;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100px;
-  position: relative;
+  height: 104px;
 }
 
-nav .navbar {
-  padding-top: 40px;
-}
-
-nav .navbar a {
+nav .navbar-brand {
+  font-size: 1.75rem;
   color: white;
   font-weight: 900;
+  margin-left: 1rem;
+}
+
+nav .navbar-nav a {
   text-decoration: none;
-  font-family: "MyFont";
-  margin: 0px 0.8rem;
-}
-
-nav .navbar .main-text {
   color: white;
-  font-size: 1.75em;
-  font-family: "MyFont";
+  font-weight: 900;
+  margin-right: 10px;
 }
 
-nav .navbar #list-menu {
-  margin: 0 32px;
-  padding: 0px 28px;
-}
-
-nav .navbar #list-menu li {
-  list-style: none;
-  display: inline-block;
-  margin: 0px 0.25rem;
-}
-
-nav .navbar #list-menu li a:hover {
+nav .navbar-nav a:hover {
   color: #1abc9c;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-nav .navbar .nav-list {
-  display: contents;
-}
-
-nav .navbar .menu {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .menu {
-    display: block !important;
-    width: 85px;
-    height: 43px;
-    font-size: 80%;
-    background-color: #1abc9c;
-    color: white;
-    padding: 12px;
-    text-align: center;
-    border-radius: 0.5rem;
-    position: absolute;
-    left: 500px;
-    bottom: 35px;
-    cursor: pointer;
-  }
-  #list-menu li a {
-    margin: 20px 0;
-  }
 }
 
 .profil {
@@ -657,7 +595,7 @@ nav .navbar .menu {
   height: 4px;
   background-color: #212529;
   bottom: 20px;
-  right: 213px;
+  right: 206px;
 }
 
 .modal-dialog .modal-content .star-logo::after {
@@ -667,7 +605,7 @@ nav .navbar .menu {
   height: 4px;
   background-color: #212529;
   bottom: 20px;
-  left: 213px;
+  left: 201px;
 }
 
 .modal-dialog .modal-content .pc-box img {

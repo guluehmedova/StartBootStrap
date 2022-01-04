@@ -18,31 +18,24 @@
 <body>
     <!-- Header Start -->
     <header>
-        <nav>
-            <div class="container">
-                <div class="row">
-                    <div class="navbar">
-                        <div class="col-5">
-                            <div class="main-text">
-                                <a href="#">@settings.FirstOrDefault(x => x.Key == "Main-Logo").Value</a>
-                            </div>
-                        </div>
-                        <div class="col-6 d-flex">
-                            <div class="nav-list">
-                                <ul id="list-menu" class="ms-auto">
-                                    <li class="mx-0 mx-lg-1"><a href="#">PORTFOLIO</a></li>
-                                    <li class="mx-0 mx-lg-1"><a href="#">ABOUT</a></li>
-                                    <li class="mx-0 mx-lg-1"><a href="#">CONTACT</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="menu">
-                            MENU  <i class="fas fa-bars"></i>
-                        </div>
+        <!-- Header Start -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">@settings.FirstOrDefault(x => x.Key == "Main-Logo").Value</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"
+                          style="background-color: #1abc9c; color: white; width: 95px; height: 44px; border-radius: 9%; padding: 10px;">Menu<i style="padding-left: 2px;" class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#">PORTFOLIO</a>
+                        <a class="nav-link" href="#">ABOUT</a>
+                        <a class="nav-link" href="#">CONTACT</a>
                     </div>
                 </div>
             </div>
         </nav>
+        <!-- Header End -->
     </header>
     <!-- Header End -->
     @RenderBody()
