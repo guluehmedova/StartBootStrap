@@ -1,0 +1,22 @@
+﻿@model Setting
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Key: @Model.Key</h5>
+                    <p class="card-text">Value: @Model.Value</p>
+
+                    <form method="post" asp-action="delete" class="d-inline-block">
+                        <input name="id" value="@Model.Id" type="hidden" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                    <a asp-action="index" class="btn btn-primary">Go to back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

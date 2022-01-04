@@ -1,0 +1,22 @@
+﻿@model Portfolio
+
+<div class="modal-body text-center">
+    <h5 class="modal-title">@Model.Title</h5>
+    <div class="delete-btn" style="position:absolute; left:863px; top:20px; font-size:64px; cursor:pointer">
+        <i class="fas fa-times"></i>
+    </div>
+    <div class="star-logo">
+        <i class="fas fa-star"></i>
+    </div>
+    <div class="pc-box">
+        <img src="~/uploads/portfolios/@Model.Image" alt="">
+    </div>
+    <div class="desc">
+        <p>
+           @Model.Desc
+        </p>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" style="cursor:pointer" class="btn btn-secondary close-btn" data-dismiss="modal"><i class="fas fa-times"></i>Close Window</button>
+</div>

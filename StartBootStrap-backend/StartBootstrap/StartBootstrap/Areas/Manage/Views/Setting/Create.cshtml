@@ -1,0 +1,31 @@
+﻿@model Setting
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Setting Create Page</h1>
+        </div>
+        <div class="col-12">
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="Key">Key</label>
+                    <input class="form-control" asp-for="Key" placeholder="Enter New Key">
+                    <span asp-validation-for="Key" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Value">Value</label>
+                    <input asp-for="Value" class="form-control" placeholder="Enter New Value">
+                    <span asp-validation-for="Value" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    @await Html.PartialAsync("_ValidationScriptsView")
+}

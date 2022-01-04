@@ -1,0 +1,30 @@
+﻿@model Setting
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Setting Edit Page</h1>
+        </div>
+        <div class="col-12">
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="Key">Key</label>
+                    <input class="form-control" asp-for="Key" placeholder="Enter New Key">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Value">Value</label>
+                    <input asp-for="Value" class="form-control" placeholder="Enter New Value">
+                </div>
+                <button type="submit" class="btn btn-primary">Edit</button>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    @await Html.PartialAsync("_ValidationScriptsView")
+}
+

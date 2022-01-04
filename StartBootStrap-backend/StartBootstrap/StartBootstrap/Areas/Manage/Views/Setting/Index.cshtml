@@ -1,0 +1,43 @@
+﻿@model List<Setting>
+@{
+    ViewData["Title"] = "Index";
+    int count = 0;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 style="display:inline-block">Setting Page</h1>
+            <a asp-action="create" style="float:right" class="btn btn-primary">Create</a>
+        </div>
+        <div class="col-12">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Key</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Setting item in Model)
+                    {
+                        count++;
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@item.Key</td>
+                        <td>@item.Value</td>
+                        <td>
+                            <a class="btn btn-danger" asp-route-id="@item.Id" asp-action="delete">Delete</a>
+                            <a class="btn btn-warning" asp-route-id="@item.Id" asp-action="edit">Edit</a>
+                        </td>
+                     </tr>
+                    }
+                       
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

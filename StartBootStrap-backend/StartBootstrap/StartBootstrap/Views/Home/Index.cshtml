@@ -1,0 +1,170 @@
+﻿@model List<Portfolio>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<main>
+    <!-- Profil Section Start -->
+    <section>
+        <div class="profil">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
+                        <div class="profil-photo md-6">
+                            <img src="	https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/avataaars.svg" alt="">
+                        </div>
+                        <div class="text-main">
+                            START BOOTSTRAP
+                        </div>
+                        <div class="star-logo">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="profession">
+                            Graphic Artist - Web Designer - Illustrator
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Profil Section End -->
+    <!-- Portfolio Section Start -->
+    <section>
+        <div class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main">
+                            <div class="main-header">
+                                PORTFOLIO
+                            </div>
+                            <div class="star-logo">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-6 col-lg-4 mb-5 img-box"data-id="@item.Id">
+                            <div class="box">
+                                <div class="hoverbox"></div>
+                                <i class="fas fa-plus"></i>
+                                <img class="img-box" src="~/uploads/portfolios/@item.Image">
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section End -->
+    <!-- About Section Start -->
+    <section>
+        <div class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-column align-items-center">
+                        <div class="main">
+                            <div class="main-header">ABOUT</div>
+                            <div class="star-logo">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="boxes">
+                        <div class="col-lg-4">
+                            <div class="text-box">
+                                <p>
+                                    Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML,
+                                    and JavaScript as well as optional SASS stylesheets for easy customization.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="text-box">
+                                <p>
+                                    Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML,
+                                    and JavaScript as well as optional SASS stylesheets for easy customization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-btn">
+                        <div class="col-3 ">
+                            <div class="download-btn">
+                                <i class="fas fa-download"></i>
+                                <a href="#">FREE DOWNLOAD!</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+    <!-- Contact Me Section Start -->
+    <section>
+        <div class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="form-part">
+                        <div class="header-part">
+                            <div class="header-text">
+                                CONTACT ME
+                            </div>
+                            <div class="star-logo">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-floating col-12">
+                            <form class="form-group" action="#">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="floatingFullname" placeholder="full name">
+                                    <label for="floatingFullname">Full name</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="floatingEmail" placeholder="email address">
+                                    <label for="floatingEmail">Email Address</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="floatingPhone" placeholder="phone number">
+                                    <label for="floatingPhone">Phone number</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <textarea name="message" id="floatingMessage" class="form-control" placeholder="message"></textarea>
+                                    <label for="floatingMessage">Message</label>
+                                </div>
+                                <button class="btn btn-primary disabled" id="submutbtn" type="submit">Send</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Me Section End -->
+    <!-- Detail Modal Start -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog d-flex flex-column align-items-center" role="document">
+            <div class="modal-content" style="width:1140px; height:978px;">
+              
+            </div>
+        </div>
+    </div>
+    <!-- Detail Modal End -->
+
+</main>
+
+@section Scripts
+{
+    @await Html.PartialAsync("_ValidationScripts")
+}

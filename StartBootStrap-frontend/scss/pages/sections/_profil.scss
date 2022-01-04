@@ -1,0 +1,59 @@
+.profil
+{
+    background-color: #1abc9c;
+    width: 100%;
+    height: 700px;
+
+    .profil-photo
+    {
+        margin-top: 165px;
+        img 
+        {
+            width: 15rem;
+        }
+    }
+
+    .text-main
+    {
+        font-size: 4rem;
+        color: white;
+        font-weight: 900;
+        font-family: "MyFont";
+        line-height: 3.5rem;
+        margin: 35px 0px;
+    }
+
+    .star-logo
+    {
+        color: white;
+        font-size: 32px;
+        position: relative;
+    }
+    .star-logo::after
+    {
+        content: "";
+        width: 118px;
+        height: 5px;
+        position: absolute;
+        background-color: white;
+        bottom: 16px;
+        left: 49px;
+    }
+    .star-logo::before
+    {
+        content: "";
+        width: 118px;
+        height: 5px;
+        position: absolute;
+        background-color: white;
+        bottom: 16px;
+        right: 48px;
+    }
+
+    .profession
+    {
+        color: white;
+        font-size: 1.5rem;
+        margin: 35px 0px;
+    }
+}
